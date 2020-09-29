@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#container {
+  height: 800px;
+  width: 800px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  flex-grow: 1;
+  display: flex;
+}
+
+.col {
+  flex-grow: 1;
+  margin: 1px;
+  border: 1px solid black;
+}
+
+.col:hover {
+  background-color: black;
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+  font-size: 30px;
+}
