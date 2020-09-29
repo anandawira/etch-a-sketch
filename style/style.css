@@ -5,11 +5,13 @@
 }
 
 #container {
-  height: 800px;
-  width: 800px;
+  height: 700px;
+  width: 700px;
   margin: auto;
   display: flex;
   flex-direction: column;
+  border: 2px solid black;
+  box-shadow: 10px 8px 10px grey;
 }
 
 .row {
@@ -19,16 +21,24 @@
 
 .col {
   flex-grow: 1;
-  margin: 1px;
   border: 1px solid black;
-}
-
-.col:hover {
-  background-color: black;
 }
 
 button {
   display: block;
-  margin: 20px auto;
-  font-size: 30px;
+  margin: 0px auto 10px auto;
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
+  border: 1px solid black;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: red;
+  color: white;
+  font-weight: bolder;
+}
+
+h1 {
+  font-family: "Gloria Hallelujah", cursive;
+  text-align: center;
+  font-size: 50px;
 }

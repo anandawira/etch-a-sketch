@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch-a-Sketch</title>
     <link rel="stylesheet" href="./style/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <main>
-      <button onclick="resetGrid()">Reset</button>
+      <h1>Etch-a-Sketch</h1>
+      <button onclick="resetGrid()">RESET</button>
       <div id="container"></div>
     </main>
   </body>
@@ -37,9 +42,16 @@
       for (let i = 0; i < size; i++) {
         containerDiv.appendChild(rowGrid.cloneNode(true));
       }
+
+      const cells = Array.from(document.querySelectorAll(".col"));
+      cells.forEach((cell) =>
+        cell.addEventListener("mouseenter", function (e) {
+          event.target.style.backgroundColor = "black";
+        })
+      );
     }
 
-    generateGrid(64);
+    generateGrid(16);
 
     function resetGrid() {
       let size;
