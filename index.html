@@ -14,17 +14,17 @@
     <main>
       <h1>Etch-a-Sketch</h1>
       <button onclick="resetGrid()">RESET</button>
-	<button onclick="ChangeColor()">Change color</button>
+      <button onclick="ChangeColor()">Change color</button>
       <div id="container"></div>
     </main>
   </body>
   <script>
- var size = 20;
-var color="black";
+    var size = 20;
+    var color = "black";
     // Getting the container div DOM element
     const containerDiv = document.querySelector("#container");
 
-    function generateGrid(size,color) {
+    function generateGrid(size, color) {
       // Resetting the container
       containerDiv.innerHTML = "";
 
@@ -54,10 +54,9 @@ var color="black";
       );
     }
 
-    generateGrid(16,color);
+    generateGrid(16, color);
 
     function resetGrid() {
-     
       while (true) {
         size = Number(prompt("How many tiles per row and column do you want?"));
         if (size) {
@@ -65,21 +64,25 @@ var color="black";
         }
         alert("Please input number only");
       }
-      generateGrid(size,color);
+      generateGrid(size, color);
     }
 
-function ChangeColor()
-{
-
-while(true){
-color=prompt("Choose color- red, blue, purple, black");
-if(color=="red" ||color=="blue" || color=="purple" ||color=="black" ){
-break;
-}
-alert("Please input color from the list above")
-
-}
-generateGrid(size,color);
-}
+    function ChangeColor() {
+      while (true) {
+        color = prompt(
+          "Choose a color \(Red, Blue, Purple, Black\)"
+        ).toLowerCase();
+        if (
+          color == "red" ||
+          color == "blue" ||
+          color == "purple" ||
+          color == "black"
+        ) {
+          break;
+        }
+        alert("Please input color from the list above");
+      }
+      generateGrid(size, color);
+    }
   </script>
 </html>
