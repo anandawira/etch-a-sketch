@@ -3,28 +3,17 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  background-color: #d9afd9;
-  background-image: linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%);
-  min-height: 100vh;
-  min-width: 100vw;
-}
 
 #container {
-  height: 500px;
-  width: 500px;
+  height: 700px;
+  width: 700px;
   margin: auto;
   display: flex;
   flex-direction: column;
   border: 2px solid black;
   box-shadow: 10px 8px 10px grey;
 }
-.btn-container {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  bottom: 10%;
-}
+
 .row {
   flex-grow: 1;
   display: flex;
@@ -36,8 +25,7 @@ body {
 }
 
 button {
-  display: inline-block;
-  /* display: block; */
+  display: block;
   margin: 0px auto 10px auto;
   font-size: 20px;
   font-family: "Open Sans", sans-serif;
@@ -54,4 +42,8 @@ h1 {
   font-family: "Gloria Hallelujah", cursive;
   text-align: center;
   font-size: 50px;
+}
+
+html{
+  background: linear-gradient(-45deg , #EE7752, #E73C7E, #23A6D5, #23D5AB);
 }
