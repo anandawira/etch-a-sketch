@@ -48,10 +48,38 @@ button {
   background-color: red;
   color: white;
   font-weight: bolder;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+button:hover{
+  background-color:white;
+  color:red;
 }
 
 h1 {
   font-family: "Gloria Hallelujah", cursive;
   text-align: center;
   font-size: 50px;
+}
+
+.color_picker{
+  width:30px;
+  background-color:black;
+  cursor:pointer;
+  margin-left:10px;
+  box-shadow: 3px 3px 3px grey;
+  border:none;
+  outline:none;
+  border-radius:30px;
+  transition:0.3s;
+  transform:translateY(5px);
+}
+
+.color_picker:hover{
+  transform: translateY(-2px);
+}
+
+.color_picker::-webkit-color-swatch{
+  display:none;
 }
