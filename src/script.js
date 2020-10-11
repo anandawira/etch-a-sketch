@@ -46,18 +46,8 @@ function resetGrid() {
   generateGrid(size, color);
 }
 
-function ChangeColor() {
-  while (true) {
-    color = prompt("Choose a color (Red, Blue, Purple, Black)").toLowerCase();
-    if (
-      color == "red" ||
-      color == "blue" ||
-      color == "purple" ||
-      color == "black"
-    ) {
-      break;
-    }
-    alert("Please input color from the list above");
-  }
-  generateGrid(size, color);
-}
+document.getElementsByClassName('color_picker')[0]
+  .addEventListener("change", (event)=>{
+    event.target.style.backgroundColor = event.target.value;
+    generateGrid(size, event.target.value);
+})
