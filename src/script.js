@@ -46,10 +46,6 @@ function resetGrid() {
   generateGrid(size, color);
 }
 
-function ChangeColor() {
-  document.getElementsByClassName('color_picker')[0].click();
-}
-
 document.getElementsByClassName('color_picker')[0]
   .addEventListener("change", (event)=>{
     event.target.style.backgroundColor = event.target.value;
